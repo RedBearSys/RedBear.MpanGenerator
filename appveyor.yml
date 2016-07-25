@@ -11,3 +11,5 @@ notifications:
 - provider: Slack
   incoming_webhook:
     secure: Mtm90XxM7T+5NlCQZ6xlQMqJ4I88JWmn6Vf3CgsTmhmcWPZHzIX5v5UxiOxtXqlpqWYVaXLCBsxU3vCMw+Ru9rhtrVag0a9ZvTzg59uU4KM=
+artifacts:
+- path: src\bin\Debug\RedBear.MpanGenerator.exe
