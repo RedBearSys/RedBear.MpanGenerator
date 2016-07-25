@@ -19,7 +19,7 @@ deploy:
   storage_access_key:
     secure: kM+0k+fbuvqkBACRn2ZR3PkVyeq6cUzQa6jVD3BKVyO32xuJvfWUjynQl6Y2ye2hAJCZ5KO0oK2vFxZfw2+4PS5P4pF+dL59NGAT5UoTSnmVjyOXK6ly+sguZMLZk7fc
   container: mpangenerator
-  folder: 
+  folder: /
   artifact: src/bin/Debug/RedBear.MpanGenerator.exe
   unzip: false
   set_content_type: true
