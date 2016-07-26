@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace RedBear.MpanGenerator
@@ -12,17 +13,25 @@ namespace RedBear.MpanGenerator
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
-            var mpan = long.Parse(txtMpan.Text);
-            var isValid = false;
-
-            while (!isValid)
+            if (Regex.IsMatch(txtMpan.Text, "[0-9]{13}"))
             {
-                mpan += 1;
-                isValid = MpanIsValid(mpan.ToString());
-            }
+                var mpan = long.Parse(txtMpan.Text);
+                var isValid = false;
 
-            txtMpan.Text = mpan.ToString();
-            Clipboard.SetText(txtMpan.Text);
+                while (!isValid)
+                {
+                    mpan += 1;
+                    isValid = MpanIsValid(mpan.ToString());
+                }
+
+                txtMpan.Text = mpan.ToString();
+                Clipboard.SetText(txtMpan.Text);
+            }
+            else
+            {
+                MessageBox.Show(@"That's not a valid MPAN!", @"Not a valid MPAN", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
         }
 
         private bool MpanIsValid(string mpan)
