@@ -29,13 +29,29 @@
       <Directory Id="ProgramFilesFolder">
         <Directory Id="INSTALLFOLDER" Name="MpanGenerator" />
       </Directory>
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="Red Bear"/>
+      </Directory>
     </Directory>
+
+    <DirectoryRef Id="ApplicationProgramsFolder">
+      <Component Id="ApplicationShortcut" Guid="55d8b7bb-b91e-4956-a2b9-673988994f27">
+        <Shortcut Id="ApplicationStartMenuShortcut"
+             Name="MPAN Generator"
+           Description="Generates valid MPANS for testing"
+            Target="[#MainFile]"
+                  WorkingDirectory="INSTALLFOLDER"/>
+        <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+        <RegistryValue Root="HKCU" Key="Software\Microsoft\MpanGenerator" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+      </Component>
+    </DirectoryRef>
   </Fragment>
   <Fragment>
     <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
       <Component Id="ProductComponent" Guid="">
         <File Id="MainFile" Source="$(var.RedBear.MpanGenerator.TargetPath)" />
       </Component>
+      <ComponentRef Id="ApplicationShortcut" />
     </ComponentGroup>
   </Fragment>
 </Wix>
