@@ -3,18 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBear.MpanGenerator", "RedBear.MpanGenerator.csproj", "{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RedBear.MpanGenerator", "RedBear.MpanGenerator\RedBear.MpanGenerator.csproj", "{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "RedBear.MpanGenerator.Setup", "RedBear.MpanGenerator.Setup\RedBear.MpanGenerator.Setup.wixproj", "{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}.Debug|x86.Build.0 = Debug|Any CPU
 		{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{A1D1A8D1-0BA7-4EC4-ABB8-9ECAD1AD93EE}.Release|x86.Build.0 = Release|Any CPU
+		{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}.Debug|Any CPU.Build.0 = Debug|x86
+		{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}.Debug|x86.ActiveCfg = Debug|x86
+		{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}.Debug|x86.Build.0 = Debug|x86
+		{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}.Release|Any CPU.ActiveCfg = Release|x86
+		{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}.Release|Any CPU.Build.0 = Release|x86
+		{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}.Release|x86.ActiveCfg = Release|x86
+		{FEA63FE0-F283-4916-A77C-2C3DBFEC760A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
